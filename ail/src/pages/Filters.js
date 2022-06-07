@@ -7,7 +7,7 @@ export default function
             <div className='col-4'>
                 <div className="input-group flex-nowrap">
                     <span className="input-group-text" id="addon-wrapping">Fecha</span>
-                    <input className='form-control' type="date" name="" value="" />
+                    <input className='form-control' type="date" name="" />
                 </div>
             </div>
             <div className='col-4'>

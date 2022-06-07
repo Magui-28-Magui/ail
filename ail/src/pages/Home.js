@@ -2,25 +2,27 @@ import React from 'react'
 import Filters from './Filters'
 import { Input, InputSelect } from '../assets/css/Input';
 import { MdCreate } from 'react-icons/md';
+import LongText from '../components/LongText';
 import Modal from '../components/Modal';
 import useModal from '../hooks/useModal';
 
 export default function Home() {
-    const {isShowing, toggle} = useModal();
+    const { toggle, visible } = useModal();
 
     return (
         <div>
             <Filters />
             <div className='row'>
                 <div className='d-flex justify-content-end my-2'>
-                    <button className='btn btn-success'><MdCreate className='mx-2' width={10} />Add Foro</button>
+                    <button className='btn btn-success' onClick={toggle} ><MdCreate className='mx-2' width={10} />Add Foro</button>
+                    <Modal visible={visible} toggle={toggle} />
                 </div>
-               <Modal isShowing={isShowing} hide={toggle} />
             </div>
             <div className="table-responsive">
-                <table className="table my-2">
+                <table className="table my-2 table-bordered">
                     <thead>
                         <tr>
+                            <th scope="col">Foro</th>
                             <th scope="col">Date</th>
                             <th scope="col">Impacted Metric</th>
                             <th scope="col">Issue</th>
@@ -34,7 +36,10 @@ export default function Home() {
                     <tbody>
                         <tr>
                             <td style={{ width: '10rem' }}>
-                                <Input className='form-control' type="date" name="" value="" />
+                                Project
+                            </td>
+                            <td style={{ width: '10rem' }}>
+                                <Input className='form-control' type="date" name="" />
                             </td>
                             <td style={{ width: '10rem' }}>
                                 <InputSelect className='form-select'>
@@ -73,24 +78,23 @@ export default function Home() {
                                 S. MAGAÑA
                             </td>
                             <td style={{ width: '10rem' }}>
-                                <Input className='form-control' type="date" name="" value="" />
+                                <Input className='form-control' type="date" name="" />
+                            </td>
+                            <td>
+                                <LongText content="* Se esta revisando con planeacion la fabricacion del material necesario para las validaciones, una vez que se tenga confirmacion por parte de planeacion se confirmara la fecha de terminacion.
+                                    * SCR02817 fue creado y enviado a Medcomp para aprobacion. (03/22/18).
+                                    * OQ-VP007028 fue creado y aprobado en MMW; fue enviado a Medcomp para revision y aprobacion.(03/22/18).
+                                    * Se estan fabricando 500 pcs SA4351 (5F) y 500 pcs SA4356 (10F) poniendo las estacas para poder realizar la operacion de moldeo.                                                   *Se empezara a trabajar con el moldeo de las piezas. (04/12/18).
+                                    * Ya se realizaron las muestras del 10F. Pendiente realizar muestras del 5F debido a que los moldes estan siendo utilizados por produccion para cumplir con requerimientos actuales.                                                *Ya se realizaron las muestars para el 5F y ambas muestras ya fueron ingresadas a QC, estamos en espera de resultados, Cabe destacar que el OQ de inicio no a sido aprobado.
+                                    * Se envio recordatorio al cliente (5/31/2018).                *El OQ-VP007028 ya fue aprovado por el cliente, se esta trabajando en resultados y conclusiones (7/16/2018).       *El protocolo OQ está circulando para su aprobación final (7/30/2018).                                                                     *El protocolo OQ fue enviado al cliente para su revisión y aprobación (8/6/2018).                                                  *Se pidio soporte a Customer Service para solicitar un update al cliente, sin obtener respuesta (9/3/2018).                                                                                         *Se pidio soporte a Customer Service para solicitar un update al cliente, sin obtener respuesta (04/2019).
+                                    El OQ-VP007028 fue aprobado por el cliente.
+                                    El PQ-VP007650 fue enviado al cliente para aprobacion de inicio. (09/17/19).
+                                    *En espera de aprobacion de cliente, se solicito soporte a Customer Service para solicitar un update al cliente. (10/21/19)"
+                                    limit={400}
+                                />
                             </td>
                             <td style={{ width: '10rem' }}>
-                                <button type="button" className="btn btn-primary" onClick={toggle}>
-                                    Launch demo modal
-                                </button>
-                                "* Se esta revisando con planeacion la fabricacion del material necesario para las validaciones, una vez que se tenga confirmacion por parte de planeacion se confirmara la fecha de terminacion.
-                                * SCR02817 fue creado y enviado a Medcomp para aprobacion. (03/22/18).
-                                * OQ-VP007028 fue creado y aprobado en MMW; fue enviado a Medcomp para revision y aprobacion.(03/22/18).
-                                * Se estan fabricando 500 pcs SA4351 (5F) y 500 pcs SA4356 (10F) poniendo las estacas para poder realizar la operacion de moldeo.                                                   *Se empezara a trabajar con el moldeo de las piezas. (04/12/18).
-                                * Ya se realizaron las muestras del 10F. Pendiente realizar muestras del 5F debido a que los moldes estan siendo utilizados por produccion para cumplir con requerimientos actuales.                                                *Ya se realizaron las muestars para el 5F y ambas muestras ya fueron ingresadas a QC, estamos en espera de resultados, Cabe destacar que el OQ de inicio no a sido aprobado.
-                                * Se envio recordatorio al cliente (5/31/2018).                *El OQ-VP007028 ya fue aprovado por el cliente, se esta trabajando en resultados y conclusiones (7/16/2018).       *El protocolo OQ está circulando para su aprobación final (7/30/2018).                                                                     *El protocolo OQ fue enviado al cliente para su revisión y aprobación (8/6/2018).                                                  *Se pidio soporte a Customer Service para solicitar un update al cliente, sin obtener respuesta (9/3/2018).                                                                                         *Se pidio soporte a Customer Service para solicitar un update al cliente, sin obtener respuesta (04/2019).
-                                El OQ-VP007028 fue aprobado por el cliente.
-                                El PQ-VP007650 fue enviado al cliente para aprobacion de inicio. (09/17/19).
-                                *En espera de aprobacion de cliente, se solicito soporte a Customer Service para solicitar un update al cliente. (10/21/19)"
-                            </td>
-                            <td style={{ width: '10rem' }}>
-                                <Input className='form-control' type="date" name="" value="" />
+                                <Input className='form-control' type="date" name="" />
                             </td>
                         </tr>
                     </tbody>
