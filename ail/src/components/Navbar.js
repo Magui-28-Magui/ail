@@ -3,7 +3,7 @@ import Logo from './../assets/images/transparente.png';
 
 export const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-light shadow-sm">
+        <nav className="navbar navbar-expand-lg bg-light shadow-sm p-0">
             <div className="container-fluid">
                 <a className="navbar-brand" width="10" href="#"><img src={Logo} /></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

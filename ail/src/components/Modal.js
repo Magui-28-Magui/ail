@@ -1,40 +1,42 @@
 import React from "react";
-import ReactDOM from "react-dom";
-//import { ModalPop, ModalOverlay } from '../assets/css/Modal';
-import styled from 'styled-components'
 
-export const ModalPop = styled.div`
-    background: #fff;
-    border: 2px solid #aaa;
-    border-radius: 5px;  
-    z-index: 999;
-    max-width: 420px;
-    margin: auto;
-    padding: 1em 2em 2em;
-    position: relative;
-    }
-`
-export const ModalOverlay = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    background-color: #000;
-    opacity: 0.75;
-    }
-`
-
-const Modal = ({ visible, toggle }) => visible ? ReactDOM.createPortal(
-    <div className="modal">
-      <ModalPop role="dialog" aria-modal="true">
-        <h3>Hello World</h3>
-        <p>Et sit saepe velit tenetur et consequatur in. Nihil doloribus nulla nulla rem. Soluta illo et asperiores numquam earum nesciunt. Vero odio voluptatem sunt sunt laboriosam.</p>
-        <button type="button" onClick={toggle}>Close</button>
-      </ModalPop>  
-      <ModalOverlay />    
-    </div>, document.body
-  ) : null;
-
-export default Modal;
+export default function Modal({ title, container }) {
+  return (
+    <div
+      className="modal fade"
+      id="modal"
+      tabIndex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div className="modal-dialog modal-lg modal-dialog-scrollable">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title" id="exampleModalLabel">
+              {title}
+            </h5>
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div className="modal-body">{container}</div>
+          <div className="modal-footer">
+            <button
+              type="button"
+              className="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" className="btn btn-primary">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

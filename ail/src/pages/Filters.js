@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-export default function
-    () {
-    return (
-        <div className='row mt-5 my-5'>
+export default function Filters() {
+  return (
+    <div className='row mt-5 my-5'>
             <div className='col-4'>
                 <div className="input-group flex-nowrap">
                     <span className="input-group-text" id="addon-wrapping">Fecha</span>
@@ -38,5 +37,5 @@ export default function
                 </div>
             </div>
         </div>
-    )
+  );
 }
