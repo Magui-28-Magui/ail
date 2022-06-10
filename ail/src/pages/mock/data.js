@@ -70,3 +70,38 @@ export const data = [
     status_action: "Finished",
   },
 ];
+
+export const users = [
+  {
+    "value": "1",
+    "label": "Mirna Araceli Salazar",
+  },
+  {
+    "value": "2",
+    "label": "Francisco Morimoto",
+  },
+  {
+    "value": "3",
+    "label": "Javier Vargas",
+  },
+  {
+    "value": "4",
+    "label": "Julio Cesar Pichardo",
+  },
+  {
+    "value": "5",
+    "label": "Juan Carlos Esquer",
+  },
+  {
+    "value": "6",
+    "label": "Margarita Campos",
+  },
+  {
+    "value": "7",
+    "label": "Emanuel Jauregui",
+  },
+  {
+    "value": "8",
+    "label": "Jose Luis Gomez",
+  },
+];

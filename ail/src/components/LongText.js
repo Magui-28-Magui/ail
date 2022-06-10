@@ -28,7 +28,7 @@ const LongText = ({ content, limit }) => {
           textDecoration: "underline",
           color: "#2F6BA1",
           fontWeight: "bold",
-          textAlign: 'justify'
+          textAlign: 'center'
         }}
         data-bs-toggle="modal"
         data-bs-target="#modal"
