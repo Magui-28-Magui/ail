@@ -11,9 +11,12 @@ export const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse d-flex justify-content-end px-5" id="navbarNavDropdown">
                     <ul className="navbar-nav">
-                        {/*<li className="nav-item">
+                        <li className="nav-item">
                             <a className="nav-link active text-dark" aria-current="page" href="#">Home</a>
-                        </li>*/}
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link active text-dark" aria-current="page" href="#">Lean Tracker</a>
+                        </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle text-dark justify-content-end px-3" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Username

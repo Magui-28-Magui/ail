@@ -2,7 +2,7 @@ export const data = [
   {
     id: 1,
     date: "2022/06/06",
-    forum_name: "Project",
+    forum_name: "Staff Meeting",
     metric: [
       { id: 1, name: "Inventory Cost" },
       { id: 2, name: "Internal Rejections" },
@@ -37,7 +37,7 @@ export const data = [
   {
     id: 2,
     date: "2022/07/06",
-    forum_name: "Meeting",
+    forum_name: "Martech te escucha",
     metric: [
       { id: 1, name: "Inventory Cost" },
       { id: 2, name: "Internal Rejections" },
