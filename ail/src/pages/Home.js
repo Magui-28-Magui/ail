@@ -22,7 +22,7 @@ export default function Home() {
     };
 
     return (
-        <div>
+        <div> 
             <Filters />
             <div className="row">
                 <div className="d-flex justify-content-end my-2">
@@ -60,10 +60,10 @@ export default function Home() {
                 </ul>
             </Tabs>
             <Content active={active === 0}>
-                <Actions data={data} />    
+                <Actions data={data} />
             </Content>
             <Content active={active === 1}>
-                <MyForums data={data} />
+                <MyForums data={data} handleClick={handleClick} />
             </Content>
             <Content active={active === 2}>
                 <History data={data} />

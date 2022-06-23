@@ -34,8 +34,8 @@ export default function Modal({ title, container }) {
                             <div className="col-6"></div>
                             <div className="col-6 d-flex justify-content-end mb-3"><button className="btn btn-success" onClick={toggle}><AiFillEdit className="mx-2" />Edit</button></div>
                         </div>
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" disabled={isDisabled} style={{ height: '350px' }} id="floatingTextarea">
+                        <div className="form-floating">
+                            <textarea className="form-control" placeholder="Leave a comment here" disabled={isDisabled} style={{ height: '350px' }} id="floatingTextarea">
                                 {container}
                             </textarea>
                         </div>

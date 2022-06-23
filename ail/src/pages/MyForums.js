@@ -1,11 +1,13 @@
 import React from 'react'
 import LongText from "../components/LongText";
 import Modal from "../components/Modal";
+import ModalEdit from "../components/ModalEdit";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 
 function MyForums({ data }) {
     return (
         <div className="table-responsive my-3">
+            <ModalEdit data={data} title={"Edit"} />
             <table className="table my-2 table-bordered">
                 <thead className="table-secondary text-center">
                     <tr>
@@ -26,8 +28,9 @@ function MyForums({ data }) {
                         ? data.map(function (element) {
                             return (
                                 <tr key={element.id}>
-                                     <td>
-                                        <button className="btn btn-warning text-white"><FaEdit /></button>
+                                    <td>
+                                        <button className="btn btn-warning text-white" data-bs-toggle="modal"
+                                            data-bs-target="#modalEdit"><FaEdit /></button>
                                         <button className="btn btn-danger text-white"><FaTrashAlt /></button>
                                     </td>
                                     <td style={{ width: "10rem" }}>{element.forum_name}</td>
@@ -55,7 +58,6 @@ function MyForums({ data }) {
                                             </span>
                                         </h4>
                                     </td>
-                                   
                                 </tr>
                             );
                         })
