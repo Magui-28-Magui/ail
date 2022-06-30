@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import { data, users } from "../pages/mock/data";
+import { users } from "../pages/mock/data";
 import makeAnimated from "react-select/animated";
 
 const animatedComponents = makeAnimated();
 
-function ModalEdit({title, data }) {
-    console.table(data)
+function ModalEdit({ title, data }) {
     const [selectedOption, setSelectedOption] = useState(null);
     return (
         <div
@@ -161,6 +160,19 @@ function ModalEdit({title, data }) {
                                         isMulti
                                         options={users}
                                         classNamePrefix="Responsible"
+                                    />
+                                </div>
+                            </div>
+                            <div className="col-6">
+                                <div className="form-check form-switch my-4">
+                                    <label className="form-check-label" for="flexSwitchCheckDefault">
+                                        Close Forum
+                                    </label>
+                                    <input
+                                        className="form-check-input mx-4"
+                                        type="checkbox"
+                                        id="flexSwitchCheckDefault"
+                                        style={{ transform: "scale(1.8)" }}
                                     />
                                 </div>
                             </div>

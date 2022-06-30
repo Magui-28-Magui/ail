@@ -4,9 +4,11 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="App container-fluid">
-      <Navbar />
+    <div id="container" className="App container-fluid">
+     <div id="body">
+     <Navbar />
       <Home />
+     </div>
     </div>
   );
 }
