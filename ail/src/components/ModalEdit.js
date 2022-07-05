@@ -90,7 +90,11 @@ function ModalEdit({ title, data }) {
                                         className="form-control"
                                         id="exampleFormControlTextarea1"
                                         rows="3"
-                                    >{data[0].issue}</textarea>
+                                        value={''}
+                                        readOnly
+                                    >
+                                        {data[0].issue}
+                                    </textarea>
                                 </div>
                             </div>
                             <div className="col-12">
@@ -105,6 +109,8 @@ function ModalEdit({ title, data }) {
                                         className="form-control"
                                         id="exampleFormControlTextarea1"
                                         rows="3"
+                                        value={''}
+                                        readOnly
                                     >
                                         {data[0].status_action}
                                     </textarea>
@@ -165,7 +171,7 @@ function ModalEdit({ title, data }) {
                             </div>
                             <div className="col-6">
                                 <div className="form-check form-switch my-4">
-                                    <label className="form-check-label" for="flexSwitchCheckDefault">
+                                    <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
                                         Close Forum
                                     </label>
                                     <input

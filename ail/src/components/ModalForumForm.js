@@ -60,7 +60,7 @@ export default function ModalActionForm({ title }) {
               </div>
             </div>
             <div className="form-check form-switch d-flex my-4 justify-content-end">
-                  <label className="form-check-label" for="flexSwitchCheckDefault">
+                  <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
                     Private
                   </label>
                   <input
@@ -69,7 +69,7 @@ export default function ModalActionForm({ title }) {
                     id="flexSwitchCheckDefault"
                     style={{ transform: "scale(1.8)" }}
                   />
-                  <label className="form-check-label" for="flexSwitchCheckDefault">
+                  <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
                     Private Meetings are only visible to users with Admin Level,
                     users who have actions for these meetings
                   </label>

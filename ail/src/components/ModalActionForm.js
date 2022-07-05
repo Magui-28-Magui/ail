@@ -90,6 +90,8 @@ export default function ModalActionForm({ title }) {
                                         className="form-control"
                                         id="exampleFormControlTextarea1"
                                         rows="3"
+                                        value={''}
+                                        onChange={()=>{}}
                                     ></textarea>
                                 </div>
                             </div>
@@ -105,6 +107,8 @@ export default function ModalActionForm({ title }) {
                                         className="form-control"
                                         id="exampleFormControlTextarea1"
                                         rows="3"
+                                        value={''}
+                                        onChange={()=>{}}
                                     ></textarea>
                                 </div>
                             </div>
@@ -137,7 +141,7 @@ export default function ModalActionForm({ title }) {
                                     >
                                         Due Date
                                     </label>
-                                    <input className="form-control" type="date" name="" />
+                                    <input value={''} onChange={()=>{}} className="form-control" type="date" name="" />
                                 </div>
                             </div>
                         </div>
